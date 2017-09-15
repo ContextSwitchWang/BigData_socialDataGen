@@ -4,7 +4,7 @@ public class Friends implements Iterable<String>{
 
 	@Override
 	public Iterator<String> iterator() {
-		return new Iter(1, 5000000);
+		return new Iter(1, 20000000);
 	}
 	public class Iter implements Iterator<String> {
 		int id;
