@@ -5,7 +5,10 @@ import java.io.PrintWriter;
 public class Main {
 	public static void write(String path, Iterable<String> what) throws FileNotFoundException {
 		PrintWriter writer = new PrintWriter(path);
-		writer.print(String.join("\n", what));
+		for(String line : what) {
+			writer.print(line);
+			writer.print("\n");
+		}
 		writer.close();
 	}
 	public static void main(String [] args) throws FileNotFoundException {
